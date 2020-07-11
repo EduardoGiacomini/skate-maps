@@ -1,4 +1,5 @@
-# Skate Maps - Encontre e compartilhe locais para andar de skate.
+# Skate Maps
+Encontre e compartilhe locais para andar de skate.
 
 ## Histórias de Usuário
 Este documento tem o objetivo de exibir quais são as necessidades básicas de skatistas que viajam para outra cidade e não conhece um bom local para andar de skate.
