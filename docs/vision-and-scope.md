@@ -10,3 +10,12 @@ Diante do exposto, é notável a falta de um meio, técnologico ou não, para a 
 
 ## Objetivos de negócio
 - Criar um meio tecnológico para propagação de locais para andar de skate no Brasil.
+
+## Métricas de sucesso
+- Ver a comunidade utilizando a ferramenta e contribuindo de qualquer maneira para manter o projeto vivo e rendendo bons frutos.
+
+## Riscos do negócio
+*Sumário: Probabilidade (0% ~ 100%) - Impacto (0 ~ 10).*
+
+- Skatistas não verem utilidade na plataforma e não a utilizarem. Probabilidade [a verificar com público]. Impacto: 8.
+- O projeto se tornar extenso e complexo o suficiente para eu não ter animação para desenvolvê-lo. Probabilidade: 65%. Impacto: 10.
