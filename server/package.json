@@ -1,0 +1,22 @@
+{
+  "name": "skate-maps-server",
+  "version": "1.0.0",
+  "description": "RESTful API para o projeto Skate Maps",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "Skateboarding",
+    "Skate Spots",
+    "API"
+  ],
+  "author": "Carlos Giacomini <carloseduardo.diasgiacomini@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
