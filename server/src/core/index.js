@@ -1,13 +1,24 @@
 class Core {
+    constructor(database, server) {
+        this.database = database;
+        this.server = server;
+    }
+
     start() {
-        console.log('[core] Starting...');
-        console.log('[core] Started!');
+        this.database.connect();
+        const connection = this.database.getConnection();
+        this.server.start(connection);
     }
 
     stop() {
-        console.log('[core] Stopping...');
-        console.log('[core] Stopped!');
+        this.database.disconnect();
     }
 }
 
-module.exports = Core;
+class CoreFactory {
+    static createCore(database, server) {
+        return new Core(database, server);
+    }
+}
+
+module.exports = { CoreFactory, Core };
