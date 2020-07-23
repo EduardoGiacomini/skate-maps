@@ -1,10 +1,6 @@
 package com.giacomini.server.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -13,13 +9,21 @@ public class Spot implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(nullable = false)
     private String name;
     private String description;
+    @Column(nullable = false, columnDefinition = "boolean default false")
     private boolean hasFlatRail;
+    @Column(nullable = false, columnDefinition = "boolean default false")
     private boolean hasBank;
+    @Column(nullable = false, columnDefinition = "boolean default false")
     private boolean hasJumpRamp;
+
+    public long getId() {
+        return id;
+    }
 
     public void setId(long id) {
         this.id = id;

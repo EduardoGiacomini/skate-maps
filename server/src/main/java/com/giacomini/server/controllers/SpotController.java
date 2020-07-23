@@ -6,12 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class SpotController {
@@ -33,5 +31,16 @@ public class SpotController {
         }
 
         return new ResponseEntity<List<Spot>>(spots, HttpStatus.OK);
+    }
+
+    @GetMapping("/api/spots/{id}")
+    public ResponseEntity<Spot> findOne(@PathVariable(value = "id") long id) {
+        Optional<Spot> foundSpot = spotRepository.findById(id);
+
+        if (foundSpot.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<Spot>(foundSpot.get(), HttpStatus.OK);
     }
 }
